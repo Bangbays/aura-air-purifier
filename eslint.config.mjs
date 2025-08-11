@@ -1,16 +1,52 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+// eslint.config.mjs
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import tseslint from 'typescript-eslint';
+import nextPlugin from "@next/eslint-plugin-next";
+import reactPlugin from "eslint-plugin-react";
+import hooksPlugin from "eslint-plugin-react-hooks";
+import globals from "globals";
 
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
+export default tseslint.config(
+  {
+    ignores: [".next/"],
+  },
+  {
+    files: ["**/*.{js,mjs,cjs,ts,tsx}"],
+    plugins: {
+      "@typescript-eslint": tseslint.plugin,
+      "@next/next": nextPlugin,
+      "react": reactPlugin,
+      "react-hooks": hooksPlugin,
+    },
+    languageOptions: {
+      parser: tseslint.parser,
+      parserOptions: {
+        project: true,
+      },
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+    },
+    rules: {
+      // Muat aturan yang direkomendasikan
+      ...tseslint.configs.recommended.rules,
+      ...nextPlugin.configs.recommended.rules,
+      ...reactPlugin.configs.recommended.rules,
+      ...hooksPlugin.configs.recommended.rules,
 
-const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
-];
-
-export default eslintConfig;
+      // Aturan kustom Anda dari file sebelumnya
+      'react/no-unescaped-entities': 'off',
+      '@next/next/no-page-custom-font': 'off',
+      'react/react-in-jsx-scope': 'off',
+      
+      // Aturan tambahan untuk clean code
+      "@typescript-eslint/no-unused-vars": "warn",
+    },
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
+  },
+);
