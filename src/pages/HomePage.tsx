@@ -29,7 +29,10 @@ export default function Home() {
                     Pre-Order Now
                   </Button>
                 </Link>
-                <Link href="/features">
+                <Link
+                  href="/features"
+                  aria-label="Learn more about Aura Air Purifier features"
+                >
                   <Button
                     variant="outline"
                     size="lg"
@@ -59,6 +62,7 @@ export default function Home() {
                   alt="Aura Air Purifier"
                   width={500}
                   height={500}
+                  priority
                   className="w-full max-w-md mx-auto rounded-3xl shadow-strong"
                 />
               </div>

@@ -61,8 +61,11 @@ const Navigation = () => {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <Link href="/pre-order">
-              <Button size="sm" className="bg-primary text-primary-foreground">
+            <Link href="/pre-order" aria-label="Pre-Order Aura Air Purifier">
+              <Button
+                size="sm"
+                className="bg-primary text-primary-foreground hover:bg-primary/90"
+              >
                 Order
               </Button>
             </Link>
