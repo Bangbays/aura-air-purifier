@@ -1,4 +1,4 @@
-"use client"; // Diperlukan karena menggunakan hook usePathname
+"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -14,7 +14,6 @@ const Navigation = () => {
     <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
             <div className="p-2 bg-gradient-primary rounded-xl group-hover:scale-110 transition-transform duration-300">
               <Wind className="h-6 w-6 text-white" />
@@ -22,7 +21,6 @@ const Navigation = () => {
             <span className="text-2xl font-bold text-gradient">Aura</span>
           </Link>
 
-          {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
             <Link
               href="/"
@@ -52,14 +50,12 @@ const Navigation = () => {
             </Link>
           </div>
 
-          {/* CTA Button */}
           <Link href="/pre-order">
             <Button className="btn-hero hidden md:inline-flex">
               Reserve Yours
             </Button>
           </Link>
 
-          {/* Mobile menu button */}
           <div className="md:hidden">
             <Link href="/pre-order" aria-label="Pre-Order Aura Air Purifier">
               <Button

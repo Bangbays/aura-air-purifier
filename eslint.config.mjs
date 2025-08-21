@@ -1,5 +1,3 @@
-// eslint.config.mjs
-
 import tseslint from 'typescript-eslint';
 import nextPlugin from "@next/eslint-plugin-next";
 import reactPlugin from "eslint-plugin-react";
@@ -29,18 +27,15 @@ export default tseslint.config(
       },
     },
     rules: {
-      // Muat aturan yang direkomendasikan
       ...tseslint.configs.recommended.rules,
       ...nextPlugin.configs.recommended.rules,
       ...reactPlugin.configs.recommended.rules,
       ...hooksPlugin.configs.recommended.rules,
 
-      // Aturan kustom Anda dari file sebelumnya
       'react/no-unescaped-entities': 'off',
       '@next/next/no-page-custom-font': 'off',
       'react/react-in-jsx-scope': 'off',
       
-      // Aturan tambahan untuk clean code
       "@typescript-eslint/no-unused-vars": "warn",
     },
     settings: {

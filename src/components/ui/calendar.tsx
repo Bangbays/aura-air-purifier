@@ -1,10 +1,8 @@
-// src/components/ui/calendar.tsx
 "use client";
 
 import * as React from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { DayPicker } from "react-day-picker";
-
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 
@@ -18,7 +16,6 @@ function Calendar({
 }: CalendarProps) {
   return (
     <div className="relative">
-      {/* Ikon kustom kita letakkan di sini, di luar DayPicker */}
       <ChevronLeft className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 pointer-events-none" />
       <ChevronRight className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 pointer-events-none" />
       <DayPicker
@@ -35,7 +32,6 @@ function Calendar({
             buttonVariants({ variant: "outline" }),
             "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100"
           ),
-          // Tambahkan classNames ini untuk menyembunyikan ikon default
           nav_button_previous: "absolute left-1 text-transparent",
           nav_button_next: "absolute right-1 text-transparent",
           table: "w-full border-collapse space-y-1",

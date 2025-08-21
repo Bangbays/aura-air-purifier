@@ -7,7 +7,6 @@ import { Shield, Smartphone, Leaf, Zap, Wind, Heart } from "lucide-react";
 export default function Home() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-hero py-20 lg:py-32">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -73,7 +72,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Key Benefits Section */}
       <section className="py-20 bg-card-elevated">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
@@ -126,7 +124,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Social Proof Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="bg-gradient-primary rounded-3xl p-12 text-center text-white">

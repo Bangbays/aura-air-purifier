@@ -21,7 +21,6 @@ import {
 export default function FeaturesPage() {
   return (
     <div className="min-h-screen py-20">
-      {/* Header */}
       <section className="container mx-auto px-6 mb-20">
         <div className="text-center max-w-4xl mx-auto">
           <Badge className="mb-4 bg-accent text-accent-foreground">
@@ -39,7 +38,6 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-      {/* Smart Sensor Technology */}
       <section className="container mx-auto px-6 mb-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
@@ -90,7 +88,6 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-      {/* Multi-Stage Filtration */}
       <section className="bg-card-elevated py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
@@ -150,7 +147,6 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-      {/* Mobile App Connectivity */}
       <section className="container mx-auto px-6 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative lg:order-2">
@@ -222,7 +218,6 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="container mx-auto px-6 py-20">
         <Card className="bg-gradient-primary text-white p-12 text-center rounded-3xl">
           <h2 className="text-3xl font-bold mb-4">

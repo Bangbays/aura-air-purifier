@@ -11,7 +11,6 @@ import {
   FormProvider,
   useFormContext,
 } from "react-hook-form";
-
 import { cn } from "@/lib/utils";
 import { Label } from "@/components/ui/label";
 
@@ -45,7 +44,6 @@ const useFormField = () => {
   const fieldContext = React.useContext(FormFieldContext);
   const itemContext = React.useContext(FormItemContext);
   const { getFieldState, formState } = useFormContext();
-
   const fieldState = getFieldState(fieldContext.name, formState);
 
   if (!fieldContext) {

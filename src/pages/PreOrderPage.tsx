@@ -52,7 +52,6 @@ export default function PreOrderPage() {
 
   return (
     <div className="min-h-screen py-20">
-      {/* Header */}
       <section className="container mx-auto px-6 mb-12">
         <div className="text-center max-w-4xl mx-auto">
           <Badge className="mb-4 bg-accent text-accent-foreground">
@@ -71,9 +70,7 @@ export default function PreOrderPage() {
 
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-3 gap-12">
-          {/* Pricing & Benefits */}
           <div className="lg:col-span-1 space-y-6">
-            {/* Pricing Card */}
             <Card className="p-8 border-2 border-primary/20 bg-gradient-to-br from-card to-card-elevated">
               <div className="text-center mb-6">
                 <div className="flex items-center justify-center space-x-2 mb-4">
@@ -120,7 +117,6 @@ export default function PreOrderPage() {
               </div>
             </Card>
 
-            {/* Exclusive Bonuses */}
             <Card className="p-6">
               <div className="flex items-center space-x-2 mb-4">
                 <Gift className="h-5 w-5 text-primary" />
@@ -163,7 +159,6 @@ export default function PreOrderPage() {
               </div>
             </Card>
 
-            {/* Security Badges */}
             <div className="grid grid-cols-3 gap-4 text-center">
               <div className="space-y-2">
                 <Shield className="h-8 w-8 text-primary mx-auto" />
@@ -186,7 +181,6 @@ export default function PreOrderPage() {
             </div>
           </div>
 
-          {/* Order Form */}
           <div className="lg:col-span-2">
             <Card className="p-8">
               <h2 className="text-2xl font-bold mb-6">
@@ -194,7 +188,6 @@ export default function PreOrderPage() {
               </h2>
 
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Personal Information */}
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-muted-foreground">
                     Personal Information
@@ -253,7 +246,6 @@ export default function PreOrderPage() {
 
                 <Separator />
 
-                {/* Shipping Address */}
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-muted-foreground">
                     Shipping Address
@@ -308,7 +300,6 @@ export default function PreOrderPage() {
 
                 <Separator />
 
-                {/* Order Summary */}
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-muted-foreground">
                     Order Summary
@@ -334,7 +325,6 @@ export default function PreOrderPage() {
                   </div>
                 </div>
 
-                {/* Submit Button */}
                 <Button type="submit" className="btn-hero w-full">
                   <CreditCard className="h-5 w-5 mr-2" />
                   Reserve Your Aura Today
